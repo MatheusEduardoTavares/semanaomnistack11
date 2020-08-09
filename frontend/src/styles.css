@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e0e5;
+}
+
+.main {
+    border: 5px solid #f0f0f5;
+}
+
+div > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0 auto 10px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+}
