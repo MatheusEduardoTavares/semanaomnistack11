@@ -6,14 +6,17 @@ import NewIncident from './pages/NewIncident'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 
+import PrivateRoute from './privateRoute/PrivateRoute'
+import {isAuthenticated} from './privateRoute/isAuthenticated'
+
 export default function Routes(){
     return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Logon}/>
-                <Route path="/profile" component={Profile}/>
+                <PrivateRoute path="/profile" component={Profile} redirectPath="/" isAuth={isAuthenticated()}/>
                 <Route path="/register" component={Register}/>
-                <Route path="/incidents/new" component={NewIncident}/>
+                <PrivateRoute path="/incidents/new" component={NewIncident} redirectPath="/" isAuth={isAuthenticated()}/>
             </Switch>
         </BrowserRouter>
     )
