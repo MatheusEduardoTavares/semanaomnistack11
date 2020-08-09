@@ -15,7 +15,6 @@ interface IncidentsProps {
     value: number;
 }
 
-
 export default function Profile() {
     const history = useHistory()
 
